@@ -1,0 +1,318 @@
+xml part:
+
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".MainActivity"
+    >
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+
+        >
+
+
+
+
+
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="230dp"
+        android:src="@drawable/cover"
+        android:scaleType="fitXY"
+        />
+
+    <LinearLayout
+        android:id="@+id/part1"
+        android:layout_width="match_parent"
+        android:layout_height="160dp"
+        android:orientation="horizontal"
+        android:layout_margin="10dp"
+        >
+        <ImageView
+            android:layout_width="160dp"
+            android:layout_height="160dp"
+            android:src="@drawable/cover"
+            android:scaleType="fitXY"
+            />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+
+            >
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="FLYING OVER IRELAND (4K UHD) - Relaxing Music Along With Beautiful Nature Videos - 4K Video HD"
+                android:textColor="#000000"
+                android:padding="8dp"
+                android:textStyle="bold"
+                />
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Ireland is an island in the North Atlantic Ocean. It is separated from Great Britain to the east by the North Strait, the Irish Sea and St ..."
+                android:textSize="10sp"
+                android:padding="8dp"
+                android:textColor="#000000"
+                />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Duration : 5.00 min"
+                android:textSize="10sp"
+                android:padding="1dp"
+                android:layout_marginLeft="9dp"
+                android:textColor="#000000"
+                />
+
+
+        </LinearLayout>
+
+
+        
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/part2"
+        android:layout_width="match_parent"
+        android:layout_height="160dp"
+        android:orientation="horizontal"
+        android:layout_margin="10dp"
+        >
+        <ImageView
+            android:layout_width="160dp"
+            android:layout_height="160dp"
+            android:src="@drawable/cover"
+            android:scaleType="fitXY"
+            />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+
+            >
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="FLYING OVER IRELAND (4K UHD) - Relaxing Music Along With Beautiful Nature Videos - 4K Video HD"
+                android:textColor="#000000"
+                android:padding="8dp"
+                android:textStyle="bold"
+                />
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Ireland is an island in the North Atlantic Ocean. It is separated from Great Britain to the east by the North Strait, the Irish Sea and St ..."
+                android:textSize="10sp"
+                android:padding="8dp"
+                android:textColor="#000000"
+                />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Duration : 5.00 min"
+                android:textSize="10sp"
+                android:padding="1dp"
+                android:layout_marginLeft="9dp"
+                android:textColor="#000000"
+                />
+
+
+        </LinearLayout>
+
+
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/part3"
+        android:layout_width="match_parent"
+        android:layout_height="160dp"
+        android:orientation="horizontal"
+        android:layout_margin="10dp"
+        >
+        <ImageView
+            android:layout_width="160dp"
+            android:layout_height="160dp"
+            android:src="@drawable/cover"
+            android:scaleType="fitXY"
+            />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+
+            >
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="FLYING OVER IRELAND (4K UHD) - Relaxing Music Along With Beautiful Nature Videos - 4K Video HD"
+                android:textColor="#000000"
+                android:padding="8dp"
+                android:textStyle="bold"
+                />
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Ireland is an island in the North Atlantic Ocean. It is separated from Great Britain to the east by the North Strait, the Irish Sea and St ..."
+                android:textSize="10sp"
+                android:padding="8dp"
+                android:textColor="#000000"
+                />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Duration : 5.00 min"
+                android:textSize="10sp"
+                android:padding="1dp"
+                android:layout_marginLeft="9dp"
+                android:textColor="#000000"
+                />
+
+
+        </LinearLayout>
+
+
+
+    </LinearLayout>
+
+
+    </LinearLayout>
+
+</ScrollView>
+
+java part:
+
+package com.example.myapplication;
+
+import androidx.appcompat.app.AppCompatActivity;
+
+import android.content.Intent;
+import android.os.Bundle;
+import android.sax.StartElementListener;
+import android.view.View;
+import android.webkit.WebView;
+import android.widget.Button;
+import android.widget.ImageView;
+import android.widget.LinearLayout;
+import android.widget.TextView;
+import android.widget.Toast;
+
+public class MainActivity extends AppCompatActivity {
+
+    LinearLayout part1,part2,part3;
+
+
+
+    @Override
+    protected void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+        setContentView(R.layout.activity_main);
+
+
+        part1 = findViewById(R.id.part1);
+        part2 = findViewById(R.id.part2);
+        part3 = findViewById(R.id.part3);
+
+        part1.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                MainActivity2.video_url = "https://www.youtube.com/embed/iYv5DZGQ4u4";
+                Intent intent = new Intent(MainActivity.this,MainActivity2.class);
+                startActivity(intent);
+
+            }
+        });
+
+        part2.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                MainActivity2.video_url = "https://www.youtube.com/embed/iYv5DZGQ4u4";
+                Intent intent = new Intent(MainActivity.this,MainActivity2.class);
+                startActivity(intent);
+
+            }
+        });
+
+        part3.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                MainActivity2.video_url = "https://www.youtube.com/embed/s7DbVTkaXn0";
+                Intent intent = new Intent(MainActivity.this,MainActivity2.class);
+                startActivity(intent);
+
+            }
+        });
+
+
+
+
+    }
+}
+
+albam xml part:
+
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".MainActivity"
+    >
+
+    <WebView
+        android:id="@+id/view1"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+
+        />
+
+
+
+
+</LinearLayout>
+
+albam java part:
+
+package com.example.myapplication;
+
+import androidx.appcompat.app.AppCompatActivity;
+
+import android.os.Bundle;
+import android.view.View;
+import android.webkit.WebView;
+
+public class MainActivity2 extends AppCompatActivity {
+
+     WebView view1;
+     public static String video_url = "";
+
+    @Override
+    protected void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+        setContentView(R.layout.activity_main2);
+
+        view1 = findViewById(R.id.view1);
+        view1.getSettings().setJavaScriptEnabled(true);
+        view1.loadUrl(video_url);
+
+
+    }
+}
